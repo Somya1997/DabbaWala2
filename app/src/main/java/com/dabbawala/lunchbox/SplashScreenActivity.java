@@ -2,6 +2,7 @@ package com.dabbawala.lunchbox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         delaySplashScreen();
     }
+    @SuppressLint("CheckResult")
     private void delaySplashScreen(){
         Completable.timer(5, TimeUnit.SECONDS,
                 AndroidSchedulers.mainThread())
